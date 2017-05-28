@@ -1,0 +1,49 @@
+.project-name{
+  position: relative;
+  border: 1px solid $gray-light;
+  font-size: 0;
+  max-width: 640px;
+  width: 100%;
+  min-height: 140px;
+  background-color: $color-background;
+  a{
+    display: block;
+    width: 100%;
+
+  }
+
+  .pn-wrapper{
+    *{
+      vertical-align: middle;
+    }
+    span{
+      height: 100%;
+      font-size: $font-xl;
+      width: 20%;
+      display: inline-block;
+      line-height: 140px;
+      text-align: center;
+      background-color: #000;
+      color: $white;
+    }
+    .content{
+      width: 60%;
+      font-size: 16px;
+      display: inline-block;
+      padding-left: 5%;
+
+      h1{
+        display: block;
+      }
+      p{
+        display: block;
+      }
+    }
+
+    .action{
+      width: 20%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+$full: calc(100% - 100px); //calculations for 100% height and width
+$line-width: 140%;
+$line-width-mobile: 80%;
+.hero {
+  background: url(../images/bg_intro.jpg) no-repeat center center fixed;
+  background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-size: 0;
+    overflow: hidden;
+    * {
+        font-size: 16px;
+    }
+
+    &-center,
+    &-left,
+    &-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &-left,
+    &-right {
+        width: 100%;
+        max-width: 50px;
+        position: relative;
+        height: $full;
+        *{
+          color: $primary;
+          margin-right: 10px;
+        }
+        > * {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            margin: auto;
+            max-height: 50px;
+            height: 100%;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            height: 20px;
+            left: 17px;
+            width: 320px;
+            bottom: -103px;
+        }
+    }
+
+    /* ======  */
+    &-left {
+    }
+
+    &-center {
+        width: $full;
+        height: $full;
+        position: relative;
+        article{
+          padding-top: 10vh;
+          padding-left: 7%;
+
+          @include mobile{
+            padding-top: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          h1, h1>* {
+              @include fontXXL;
+              b{
+                font-weight: 700;
+              }
+          }
+
+          span {
+            color: $white;
+            position: relative;
+            display: inline-block;
+            padding-right: 20px;
+            &:after{
+              content: '';
+              top: 0;
+              position: absolute;
+              display: block;
+              background: $primary;
+              width: $line-width;
+              height: 1px;
+              left: 100%;
+              top: 50%;
+              transform: translateY(-50%);
+              @include mobile{
+                width: $line-width-mobile;
+              }
+            }
+            &:before{
+              content: '';
+              position: absolute;
+              display: block;
+              background-color: $primary;
+              width: 1px;
+              height: 100%;
+              left: $line-width + 100;
+              top: 0;
+              @include mobile{
+                left: $line-width-mobile + 100;
+              }
+            }
+          }
+        }
+
+
+        .hero-discover{
+          position: absolute;
+          width: 100%;
+          display: block;
+          text-align: center;
+          bottom: 10px;
+          color: $gray-light;
+        }
+    }
+
+    &-right {
+        bottom: -50px;
+        .hero-social {
+            > * {
+                display: inline-block;
+            }
+        }
+    }
+
+    &-bottom {
+      border-top: 1px solid $color-line;
+        height: 50px;
+        display: block;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid $primary;
+        &:after{
+          content: '';
+          position: absolute;
+          display: block;
+          height: 50px;
+          width: 1px;
+          background-color: $primary;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+    }
+}
