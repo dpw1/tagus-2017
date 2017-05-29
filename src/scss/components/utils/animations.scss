@@ -1,0 +1,47 @@
+.outracoisa{
+    overflow: hidden;
+  >*{
+    position: relative;
+    display:inline-block;
+    left: 0;
+    transition: left .4s ease-in-out .5s;
+    &:after {
+      content: "";
+      width: 300%;
+      height: 100%;
+      background-color: firebrick;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transition: left 1s ease-in-out .5s;
+      z-index: 1;
+    }
+    &.hidden {
+      left: -105%;
+      &:after {
+        left: -200%;
+      }
+    }
+  }
+
+}
+
+
+
+// .list {
+//   margin: 40px 0;
+//   >article {
+//     border: 1px solid #666;
+//     padding: 20px 40px;
+//     transition: all .2s ease-in-out;
+//     cursor: pointer;
+//     position: relative;
+//     top: 80px;
+//     opacity: 0;
+//     transition: all 1.2s cubic-bezier(0,1.12,.73,1.01) .2s;
+//     &:hover {
+//       background-color: #ccc;
+//     }
+//   }
+// }

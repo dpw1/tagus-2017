@@ -1,0 +1,27 @@
+.contact{
+  margin-top: 120px;
+  position: relative;
+  z-index: 2;
+  .wrapper{
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &-block{
+    text-align: center;
+    margin-bottom: 40px;
+    p{
+      @include fontXS;
+      margin-bottom: 10px;
+    }
+    a{
+      @include fontM;
+    }
+
+    &:last-of-type{
+      a:not(:last-child){
+        margin-right: 20px;
+      }
+    }
+  }
+}

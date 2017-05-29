@@ -1,0 +1,11 @@
+.footer{
+  height: 50px;
+  background: $color-background;
+  border-top: 1px solid $color-line;
+  line-height: 50px;
+  >p{
+    @include fontXS;
+    color: $white;
+    text-align: center;
+  }
+}

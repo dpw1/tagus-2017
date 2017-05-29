@@ -4,6 +4,8 @@
   "base/functions",
   "base/base";
 
-@import "components/*";
+@import "components/modules/*";
+@import "components/atoms/*";
+@import "components/utils/*";
 
 @import "pages/**/*";

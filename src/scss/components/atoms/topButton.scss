@@ -1,0 +1,25 @@
+$top-btn-size: 80px;
+
+.top-button{
+  display: block;
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+  width: $top-btn-size;
+  line-height: $top-btn-size;
+  height: $top-btn-size;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border: 1px solid $gray-dark;
+  overflow: hidden;
+  >a{
+    position: relative;
+    @include fontM;
+    color: $primary;
+    left: 1px;
+    display: block;
+    border-radius: inherit;
+  }
+}

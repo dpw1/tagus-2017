@@ -26,18 +26,17 @@ $laptop: 1366px;
 
 //fonts
 @mixin fontXXL {
-  // font-family: $Oswald;
-  // font-weight: $ExtraLight;
+  font-family: $primary-font;
+  font-weight: 400;
   color: $primary;
   font-size: $font-xxl;
-  font-weight: 300;
   line-height: 85%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
 }
 @mixin fontXL {
-  // font-family: $Oswald;
+  font-family: $primary-font;
   // font-weight: $ExtraLight;
   color: $primary;
   font-size: $font-xl;
@@ -50,5 +49,23 @@ $laptop: 1366px;
 
 }
 @mixin fontM {
-
+  font-family: $primary-font;
+  // font-weight: $ExtraLight;
+  color: $white;
+  font-size: $font-m;
+  font-weight: 300;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin fontXS {
+  font-family: $primary-font;
+  // font-weight: $ExtraLight;
+  color: $primary;
+  font-size: $font-xs;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

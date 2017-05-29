@@ -45,10 +45,16 @@ $line-height: 80px;
   }
 
   > article{
-    max-width: 640px;
+    position: relative;
+    max-width: 80%;
+    text-align: center;
     width: 100%;
     margin: 0 auto;
     padding: 100px 50px;
+    z-index: 1;
+    @include mobile{
+      max-width: 100%;
+    }
     h2{
       @include fontXL;
       color: $white;
@@ -63,9 +69,12 @@ $line-height: 80px;
   .list{
     display: block;
     position: relative;
-    max-width: 640px;
+    max-width: 65%;
     width: 100%;
     margin: 0 auto;
     z-index: 2;
+    @include tablet{
+      max-width: 640px;
+    }
   }
 }
