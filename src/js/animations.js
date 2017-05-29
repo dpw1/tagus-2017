@@ -14,9 +14,3 @@ pWatchers.forEach(function(watcher, index) {
     ps[index].classList.remove("hidden")
   })
 });
-articleWatchers.forEach(function(watcher, index) {
-  watcher.enterViewport(function() {
-    articles[index].style.top = 0;
-    articles[index].style.opacity = 1;
-  })
-});

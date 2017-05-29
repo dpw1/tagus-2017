@@ -1,6 +1,8 @@
 $full: calc(100% - 100px); //calculations for 100% height and width
 $line-width: 140%;
 $line-width-mobile: 80%;
+
+$animation-speed: .6s;
 .hero {
   background: url(../images/bg_intro.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -75,17 +77,28 @@ $line-width-mobile: 80%;
             position: relative;
             display: inline-block;
             padding-right: 20px;
+            margin-top: 10px;
+            animation: $animation-speed ease-in $animation-speed*0 1 fadeIn;
+            animation-fill-mode: forwards;
+            &:after, &:before{
+              opacity: 0;
+              animation: $animation-speed ease-in $animation-speed*1 1 fadeIn;
+              animation-fill-mode: forwards;
+            }
             &:after{
               content: '';
               top: 0;
               position: absolute;
               display: block;
               background: $primary;
-              width: $line-width;
+              width: 0;
               height: 1px;
               left: 100%;
               top: 50%;
+
+              width: $line-width;
               transform: translateY(-50%);
+
               @include mobile{
                 width: $line-width-mobile;
               }
@@ -109,11 +122,17 @@ $line-width-mobile: 80%;
 
         .hero-discover{
           position: absolute;
-          width: 100%;
-          display: block;
+          margin-bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: inline-block;
           text-align: center;
           bottom: 10px;
           color: $gray-light;
+          color: $white;
+          opacity: 0;
+          animation: $animation-speed ease-in $animation-speed*2 1 fadeIn;
+          animation-fill-mode: forwards;
         }
     }
 
@@ -146,4 +165,13 @@ $line-width-mobile: 80%;
           margin: auto;
         }
     }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
