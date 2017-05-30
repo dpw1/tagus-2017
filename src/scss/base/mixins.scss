@@ -23,6 +23,11 @@ $laptop: 1366px;
         @content;
     }
 }
+@mixin max ($width) {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
 
 //fonts
 @mixin fontXXL {

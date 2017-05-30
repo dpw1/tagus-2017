@@ -1,6 +1,5 @@
 
 var ps = document.querySelectorAll(".hidden");
-var articles = document.querySelectorAll("article");
 var pWatchers = [];
 var articleWatchers = [];
 for(let i = 0; i < ps.length; i++) {
