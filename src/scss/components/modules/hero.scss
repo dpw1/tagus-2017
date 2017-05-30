@@ -1,6 +1,6 @@
 $full: calc(100% - 100px); //calculations for 100% height and width
-$line-width: 140%;
-$line-width-mobile: 80%;
+$line-width: 100%;
+$line-width-mobile: 10%;
 
 $animation-speed: .6s;
 .hero {
@@ -49,6 +49,9 @@ $animation-speed: .6s;
 
     /* ======  */
     &-left {
+      *{
+        @include fontXXS;
+      }
     }
 
     &-center {
@@ -73,6 +76,7 @@ $animation-speed: .6s;
           }
 
           span {
+            @include fontSM;
             color: $white;
             position: relative;
             display: inline-block;
@@ -138,6 +142,9 @@ $animation-speed: .6s;
 
     &-right {
         bottom: -50px;
+        *{
+          @include fontXXS;
+        }
         .hero-social {
             > * {
                 display: inline-block;

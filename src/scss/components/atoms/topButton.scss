@@ -1,6 +1,7 @@
 $top-btn-size: 80px;
 
 .top-button{
+  @extend .--float;
   display: block;
   position: relative;
   z-index: 2;
