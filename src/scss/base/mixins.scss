@@ -31,24 +31,28 @@ $laptop: 1366px;
 
 //fonts
 @mixin fontXXL {
-  font-family: $primary-font;
-  font-weight: 400;
-  color: $primary;
-  font-size: $font-xxl;
-  line-height: 85%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  &, *{
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $primary;
+    font-size: $font-xxl;
+    line-height: 85%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 }
 @mixin fontXL {
-  font-family: $primary-font;
-  // font-weight: $ExtraLight;
-  color: $primary;
-  font-size: $font-xl;
-  font-weight: 300;
-  line-height: 85%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    &, *{
+    font-family: $primary-font;
+    // font-weight: $ExtraLight;
+    color: $primary;
+    font-size: $font-xl;
+    font-weight: 300;
+    line-height: 105%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 @mixin fontL {
 

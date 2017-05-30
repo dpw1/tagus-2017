@@ -44,7 +44,7 @@ $line-height: 80px;
     }
   }
 
-  > article{
+  > .projects__article{
     position: relative;
     max-width: 80%;
     text-align: center;
@@ -55,13 +55,13 @@ $line-height: 80px;
     @include mobile{
       max-width: 100%;
     }
-    h2{
-      @include fontXL;
+    .projects__title{
+      @include fontXXL;
       color: $white;
       text-align: center;
       line-height: 145%;
       span{
-        font-size: $font-xxl;
+        // font-size: $font-xxl;
       }
     }
   }

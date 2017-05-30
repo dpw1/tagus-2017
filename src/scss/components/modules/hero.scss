@@ -75,19 +75,19 @@ $animation-speed: .6s;
               }
           }
 
-          span {
+          .hero__subtitle {
             @include fontSM;
             color: $white;
             position: relative;
             display: inline-block;
             padding-right: 20px;
             margin-top: 10px;
-            animation: $animation-speed ease-in $animation-speed*0 1 fadeIn;
-            animation-fill-mode: forwards;
+            // animation: $animation-speed ease-in $animation-speed*0 1 fadeIn;
+            // animation-fill-mode: forwards;
             &:after, &:before{
-              opacity: 0;
-              animation: $animation-speed ease-in $animation-speed*1 1 fadeIn;
-              animation-fill-mode: forwards;
+              // opacity: 0;
+              // animation: $animation-speed ease-in $animation-speed*1 1 fadeIn;
+              // animation-fill-mode: forwards;
             }
             &:after{
               content: '';
@@ -134,9 +134,9 @@ $animation-speed: .6s;
           bottom: 10px;
           color: $gray-light;
           color: $white;
-          opacity: 0;
-          animation: $animation-speed ease-in $animation-speed*2 1 fadeIn;
-          animation-fill-mode: forwards;
+          opacity: 1;
+          // animation: $animation-speed ease-in $animation-speed*2 1 fadeIn;
+          // animation-fill-mode: forwards;
         }
     }
 

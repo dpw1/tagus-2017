@@ -1,14 +1,51 @@
 /* Words */
-var ps = document.querySelectorAll(".hidden");
-var pWatchers = [];
-for(let i = 0; i < ps.length; i++) {
-  pWatchers.push(scrollMonitor.create(ps[i]))
+var val;
+var words = document.getElementsByClassName("word");
+var wordsWatcher = [];
+
+for (val of words) {
+    appendSpan(val);
 }
-pWatchers.forEach(function(watcher, index) {
+
+function animateWord(eachDelay){
+      var animate = anime({
+    targets: '.word__bar',
+    translateX: [
+      { value: '100%', delay: function(el, i, l) { return i * eachDelay; }, duration: '450'},
+      { value: '200%', delay: 210, duration: '500'}
+    ],
+    easing: 'easeInOutCirc',
+    complete: function(anim) {
+        $(anim.animatables).each(function(){
+          //console.log(this.target.remove());
+        });
+      }
+  });
+}
+
+function appendSpan(el){
+    var firstTextNode = el.firstChild;
+    var newSpan = document.createElement('span');
+    var barSpan = document.createElement("span");
+    newSpan.className = 'word__toAnimate';
+    barSpan.className = 'word__bar'
+
+    newSpan.appendChild( document.createTextNode(firstTextNode.nodeValue) );
+    newSpan.appendChild(barSpan);
+
+    el.replaceChild( newSpan, firstTextNode );
+}
+
+for(let i = 0; i < words.length; i++) {
+  wordsWatcher.push(scrollMonitor.create(words[i]))
+}
+wordsWatcher.forEach(function(watcher, index) {
   watcher.enterViewport(function() {
-    ps[index].classList.remove("hidden")
+    animateWord(250);
   })
 });
+
+
 
 /* Projects animation */
 
