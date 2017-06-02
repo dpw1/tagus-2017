@@ -4,11 +4,15 @@
   var delay = 380;
 
   console.log('Animation Details')
+  // for(let i = 0; i < word.length; i++) {
+  //   wordWatcher.push(word[i])
+  // }
+
   for(let i = 0; i < word.length; i++) {
-    wordWatcher.push(word[i])
+    wordWatcher.push(scrollMonitor.create(word[i]))
   }
   wordWatcher.forEach(function(watcher, index) {
-
+      watcher.enterViewport(function() {
       function animateWord(x, callback) {
         new RevealFx(word[index], {
           revealSettings: {
@@ -31,5 +35,5 @@
 
         setTimeout(animateWord, index * delay );
   });
-
+});
 }();

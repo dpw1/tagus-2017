@@ -6,7 +6,7 @@
   min-height: 140px;
   border: 1px solid $gray-light;
   background-color: $color-background;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(80px);
   transition: all 1.5s cubic-bezier(0,1.12,.73,1.01) .5s;
   &:not(:first-child){
