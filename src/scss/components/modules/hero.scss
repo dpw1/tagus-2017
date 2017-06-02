@@ -82,9 +82,11 @@ $animation-speed: .6s;
             display: inline-block;
             padding-right: 20px;
             margin-top: 10px;
+            z-index: 1;
             // animation: $animation-speed ease-in $animation-speed*0 1 fadeIn;
             // animation-fill-mode: forwards;
             &:after, &:before{
+              display: none !important;
               // opacity: 0;
               // animation: $animation-speed ease-in $animation-speed*1 1 fadeIn;
               // animation-fill-mode: forwards;
@@ -171,6 +173,22 @@ $animation-speed: .6s;
           bottom: 0;
           margin: auto;
         }
+    }
+
+    &-title{
+      *{
+        @include fontXXL;
+      }
+      color: red;
+      // *{
+      //     @include fontXXL;
+      // }
+      //
+      // color: blue;
+      // text-align: left;
+      // >.block-revealer{
+      //   text-align: left;
+      // }
     }
 }
 

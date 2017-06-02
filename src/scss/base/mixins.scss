@@ -31,7 +31,6 @@ $laptop: 1366px;
 
 //fonts
 @mixin fontXXL {
-  &, *{
     font-family: $primary-font;
     font-weight: 400;
     color: $primary;
@@ -39,8 +38,6 @@ $laptop: 1366px;
     line-height: 85%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
 }
 @mixin fontXL {
     &, *{
