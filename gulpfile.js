@@ -41,11 +41,11 @@ var paths = {
 gulp.task('serve', () => {
   browserSync.init({
     server: paths.dist.root,
-    open: false,
+    open: true,
     notify: false,
 
     // Whether to listen on external
-    online: false,
+    online: true,
   });
 });
 

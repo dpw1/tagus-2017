@@ -3,6 +3,7 @@ $line-width: 100%;
 $line-width-mobile: 10%;
 
 $animation-speed: .6s;
+
 .hero {
   background: url(../images/bg_intro.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -128,7 +129,8 @@ $animation-speed: .6s;
 
         .hero-discover{
           position: absolute;
-          margin-bottom: 20px;
+          margin-bottom: 1.5%;
+          width: 100%;
           left: 50%;
           transform: translateX(-50%);
           display: inline-block;
@@ -137,8 +139,6 @@ $animation-speed: .6s;
           color: $gray-light;
           color: $white;
           opacity: 1;
-          // animation: $animation-speed ease-in $animation-speed*2 1 fadeIn;
-          // animation-fill-mode: forwards;
         }
     }
 
@@ -148,6 +148,7 @@ $animation-speed: .6s;
           @include fontXXS;
         }
         .hero-social {
+              bottom: -138px;
             > * {
                 display: inline-block;
             }
@@ -161,6 +162,7 @@ $animation-speed: .6s;
         width: 100%;
         position: relative;
         border-bottom: 1px solid $primary;
+
         &:after{
           content: '';
           position: absolute;

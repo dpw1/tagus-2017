@@ -30,20 +30,20 @@ $laptop: 1366px;
 }
 
 //fonts
-@mixin fontXXL {
+@mixin fontXXL($color: $primary) {
     font-family: $primary-font;
     font-weight: 400;
-    color: $primary;
+    color: $color;
     font-size: $font-xxl;
     line-height: 85%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-@mixin fontXL {
+@mixin fontXL($color: $primary) {
     &, *{
     font-family: $primary-font;
     // font-weight: $ExtraLight;
-    color: $primary;
+    color: $color;
     font-size: $font-xl;
     font-weight: 300;
     line-height: 105%;
@@ -51,13 +51,19 @@ $laptop: 1366px;
     -moz-osx-font-smoothing: grayscale;
   }
 }
-@mixin fontL {
-
-}
-@mixin fontM {
+@mixin fontL($color: $white) {
   font-family: $primary-font;
   // font-weight: $ExtraLight;
-  color: $white;
+  color: $color;
+  font-size: $font-l;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin fontM($color: $white) {
+  font-family: $primary-font;
+  // font-weight: $ExtraLight;
+  color: $color;
   font-size: $font-m;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -84,10 +90,10 @@ $laptop: 1366px;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin fontXXS{
+@mixin fontXXS($color: $primary){
   font-family: $secondary-font;
   // font-weight: $ExtraLight;
-  color: $primary;
+  color: $color;
   font-size: $font-xxs;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;

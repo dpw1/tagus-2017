@@ -51,7 +51,8 @@ $line-height: 80px;
     width: 100%;
     margin: 0 auto;
     padding: 100px 50px;
-    z-index: 1;
+    padding-bottom: 0px;
+    z-index: 2;
     @include mobile{
       max-width: 100%;
     }
@@ -59,10 +60,13 @@ $line-height: 80px;
       @include fontXXL;
       color: $white;
       text-align: center;
-      line-height: 145%;
+      line-height: 91%;
       span{
         // font-size: $font-xxl;
       }
+    }
+    .projects__title--small{
+      @include fontXL($white);
     }
   }
 
@@ -74,7 +78,7 @@ $line-height: 80px;
     margin: 0 auto;
     z-index: 2;
     @include tablet{
-      max-width: 640px;
+      max-width: 570px;
     }
   }
 }
