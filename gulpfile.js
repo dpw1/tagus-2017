@@ -77,6 +77,13 @@ gulp.task('templates', () => {
           for(var i = 0; i < n; ++i)
               accum += block.fn(i);
           return accum;
+        },
+        ifCond : function (conditional, options){
+          if (options.hash.value === conditional)
+            return options.fn(this)
+          else 
+            return options.inverse(this);
+
         }
     }
   };

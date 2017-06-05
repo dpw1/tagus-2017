@@ -1,15 +1,19 @@
 <section class="hero">
   {{> menu}}
+  {{type}} <!-- Variable to change the content -->
 
   <div class="hero-left">
     <div class="hero-about">
       <a href="#">Sobre nós!</a>
     </div>
   </div>
+
   <div class="hero-center">
-    <article>
-      <!-- <h1><span id="test" class="word">Lorem</span><br><b><span class="word">Ipgum</span></b></h1> -->
-      <h2 class="hero-title">
+      <!-- Content for the main page -->
+    <!-- {{#ifCond type value="main" }}
+        {{/ifCond}} -->
+      <article>
+        <h2 class="hero-title">
         <span>
           {{> animation/wordSlide txt='Lorem'}}
         </span>
@@ -17,17 +21,17 @@
         <span>
           {{> animation/wordSlide txt='Ipgun'}}
         </span>
-
       </h2>
 
-      <!-- <h1 class="x">Lorem</h1>
-      <h1 class="x">Ipgum</h1> -->
-      <h3 class="hero__subtitle">{{> animation/wordSlide txt='Web development'}}</h3>
-    </article>
-    <span class="hero-discover">
+
+        <h3 class="hero__subtitle">{{> animation/wordSlide txt='Web development'}}</h3>
+      </article>
+      <span class="hero-discover">
       <a href="#" class="--hover-slash">Veja nossos trabalhos ↓</a>
     </span>
+
   </div>
+
   <div class="hero-right">
     <div class="hero-social">
       <a href="#">Facebook</a>

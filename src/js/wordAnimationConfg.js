@@ -3,10 +3,6 @@
   var wordWatcher = [];
   var delay = 380;
 
-  console.log('Animation Details')
-  // for(let i = 0; i < word.length; i++) {
-  //   wordWatcher.push(word[i])
-  // }
 
   for(let i = 0; i < word.length; i++) {
     wordWatcher.push(scrollMonitor.create(word[i]))
@@ -24,7 +20,7 @@
             },
             onComplete: function(){
               showWord();
-              removeSpan();
+              setTimeout(removeSpan, 250);
             }
           }
         }).reveal();
@@ -36,9 +32,10 @@
       function removeSpan(){
         var string = (word[index].innerText || word[index].textContent)
         $(word[index]).parent().text(string);
+        // $(word[index]).parents('span').last().text(string);
       }
 
-        setTimeout(animateWord, index * delay );
+      setTimeout(animateWord, index * delay );
   });
 });
 }();
