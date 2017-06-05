@@ -1,13 +1,11 @@
-<section class="hero">
+<section id="{{id}}" class="hero {{class}}">
   {{> menu}}
-  {{type}} <!-- Variable to change the content -->
 
   <div class="hero-left">
     <div class="hero-about">
       <a href="#">Sobre nós!</a>
     </div>
   </div>
-
   <div class="hero-center">
       <!-- Content for the main page -->
     <!-- {{#ifCond type value="main" }}
@@ -15,11 +13,11 @@
       <article>
         <h2 class="hero-title">
         <span>
-          {{> animation/wordSlide txt='Lorem'}}
+          {{> animation/wordSlide txt=title1}}
         </span>
         <br>
         <span>
-          {{> animation/wordSlide txt='Ipgun'}}
+          {{> animation/wordSlide txt=title2}}
         </span>
       </h2>
 
@@ -29,6 +27,7 @@
       <span class="hero-discover">
       <a href="#" class="--hover-slash">Veja nossos trabalhos ↓</a>
     </span>
+
 
   </div>
 
@@ -42,4 +41,11 @@
   <div class="hero-bottom">
 
   </div>
+
+
+  {{#ifCond class value="hero--project" }}
+    <figure class="hero-image">
+      <img src="http://www.moj-dino.si/image/cache/catalog/dino/puppy-200x200.png" alt="">
+    </figure>
+  {{/ifCond}}
 </section>

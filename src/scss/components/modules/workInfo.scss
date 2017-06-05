@@ -1,0 +1,39 @@
+.workInfo{
+  font-size: 0;
+  background-color: $color-background;
+  .wrapper{
+    margin: 0 50px;
+  }
+  width: 100%;
+
+  &__role{
+    width: 25%;
+    border: 1px solid $color-line;
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    border-right: none;
+    border-top: none;
+    text-align: center;
+    // background: lightblue;
+    h1{
+      @include fontM($primary);;
+    }
+    h2{
+      @include fontSM;
+    }
+    @include max (1124px){
+      width: 50%;
+    }
+    @include max (768px){
+      width: 100%;
+    }
+  }
+
+  &__inner{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+}

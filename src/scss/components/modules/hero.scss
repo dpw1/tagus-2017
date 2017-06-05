@@ -3,9 +3,16 @@ $line-width: 100%;
 $line-width-mobile: 10%;
 
 $animation-speed: .6s;
+$background: '../images/bg_intro.jpg';
+
+// Backgrounds
+#fox{
+  	// background: url('http://wallpapercave.com/wp/8zKSoW4.jpg') no-repeat center center fixed;
+    // background-size: cover;
+}
 
 .hero {
-  background: url(../images/bg_intro.jpg) no-repeat center center fixed;
+  background: url('../images/bg_intro.jpg') no-repeat center center fixed;
   background-size: cover;
     height: 100vh;
     width: 100%;
@@ -84,13 +91,8 @@ $animation-speed: .6s;
             padding-right: 20px;
             margin-top: 10px;
             z-index: 1;
-            // animation: $animation-speed ease-in $animation-speed*0 1 fadeIn;
-            // animation-fill-mode: forwards;
             &:after, &:before{
               display: none !important;
-              // opacity: 0;
-              // animation: $animation-speed ease-in $animation-speed*1 1 fadeIn;
-              // animation-fill-mode: forwards;
             }
             &:after{
               content: '';
@@ -143,7 +145,10 @@ $animation-speed: .6s;
     }
 
     &-right {
-        bottom: -50px;
+      position: absolute;
+      right: 0;
+      overflow: hidden;
+      top: 11%;
         *{
           @include fontXXS;
         }
@@ -181,19 +186,98 @@ $animation-speed: .6s;
       *{
         @include fontXXL;
       }
-      color: red;
-      // *{
-      //     @include fontXXL;
-      // }
-      //
-      // color: blue;
-      // text-align: left;
-      // >.block-revealer{
-      //   text-align: left;
-      // }
+
     }
+
 }
 
+// PROJECT
+.hero--project{
+  position: relative;
+  .hero-center{
+    background: rgba(0,0,0,.3);
+    width: 35%;
+    position: relative;
+    @include max(768px){
+      width: $full;
+      height: 30%;
+    }
+    article{
+      position: absolute;
+      right: 80px;
+      bottom: 50px + 80px;
+      @include max(768px){
+        width: 100%;
+        right: auto;
+        bottom: auto;
+      }
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100px;
+      width: 1px;
+      background: $primary;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      @include max(768px){
+        right: 0;
+        width: 50px;
+        height: 1px;
+        top: 40%;
+        left: -30px;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background: $primary;
+      width: 50px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 50px;
+      @include max(768px){
+        right: 0;
+        width: 2px;
+        height: 50px;
+        top: 30%;
+        left: -4px;
+      }
+    }
+  }
+
+  .hero-title{
+      @include fontXL;
+      transform: rotate(-90deg);
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      @include max(768px){
+        transform: rotate(0);
+        width: 100%;
+      }
+  }
+  .hero-discover{
+    display: none;
+  }
+
+  .hero-image{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+  }
+
+}
+
+
+// Animations
 @keyframes fadeIn{
   0%{
     opacity: 0;

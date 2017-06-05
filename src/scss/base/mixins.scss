@@ -69,19 +69,19 @@ $laptop: 1366px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@mixin fontSM {
+@mixin fontSM($color: $white) {
   font-family: $primary-font;
   // font-weight: $ExtraLight;
-  color: $white;
+  color: $color;
   font-size: $font-sm;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@mixin fontXS {
+@mixin fontXS($color: $white) {
   font-family: $primary-font;
   // font-weight: $ExtraLight;
-  color: $primary;
+  color: $color;
   font-size: $font-xs;
   font-weight: 300;
   letter-spacing: 2px;
