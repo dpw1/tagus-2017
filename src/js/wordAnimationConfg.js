@@ -24,6 +24,7 @@
             },
             onComplete: function(){
               showWord();
+              removeSpan();
             }
           }
         }).reveal();
@@ -31,6 +32,10 @@
 
       function showWord(){
         word[index].getElementsByClassName("block-revealer--hidden")[0].style.opacity = '1';
+      }
+      function removeSpan(){
+        var string = (word[index].innerText || word[index].textContent)
+        $(word[index]).parent().text(string);
       }
 
         setTimeout(animateWord, index * delay );

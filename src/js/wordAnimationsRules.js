@@ -19,11 +19,12 @@
   }, d.prototype._layout = function() {
     var a = getComputedStyle(this.el).position;
     var text = this.el.innerHTML;
-    console.log(this.el.innerHTML);
-    "fixed" !== a && "absolute" !== a && "relative" !== a && (this.el.style.position = "relative"), this.content = addElement("span", "", text),
+
+    "fixed" !== a && "absolute" !== a && "relative" !== a && (this.el.style.position = "relative"),
+    this.content = addElement("span", "", text),
     this.options.isContentHidden && (this.content.style.opacity = 0),
     this.revealer = addElement("span", "block-revealer__element"),
-    this.el.classList.add("block-revealer"),
+    // this.el.classList.add("block-revealer"),
     this.el.innerHTML = "",
     // console.log(this.el.parentNode.tagName = "h3");
     this.el.appendChild(this.content),

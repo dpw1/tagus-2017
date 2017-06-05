@@ -1,0 +1,14 @@
+.loader{
+  background: lightblue;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 1s;
+  &--hidden{
+    opacity: 0;
+  }
+}
