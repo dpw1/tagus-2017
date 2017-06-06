@@ -1,5 +1,5 @@
 $full: calc(100% - 100px); //calculations for 100% height and width
-$line-width: 100%;
+$line-width: 70%;
 $line-width-mobile: 10%;
 
 $animation-speed: .6s;
@@ -91,29 +91,31 @@ $background: '../images/bg_intro.jpg';
             padding-right: 20px;
             margin-top: 10px;
             z-index: 1;
+
+
             &:after, &:before{
-              display: none !important;
+
+              animation: fadeIn 2s 2.5s;
+              animation-fill-mode: forwards;
+              // display: none !important;
             }
             &:after{
               content: '';
-              top: 0;
+              top: inherit;
               position: absolute;
               display: block;
               background: $primary;
-              width: 0;
               height: 1px;
               left: 100%;
               top: 50%;
-
-              width: $line-width;
               transform: translateY(-50%);
-
-              @include mobile{
-                width: $line-width-mobile;
-              }
+              width: 0;
+              animation: widthAnim 2.5s 2s;
+              animation-fill-mode: forwards;
             }
             &:before{
               content: '';
+              opacity: 0;
               position: absolute;
               display: block;
               background-color: $primary;
@@ -121,6 +123,8 @@ $background: '../images/bg_intro.jpg';
               height: 100%;
               left: $line-width + 100;
               top: 0;
+              // animation: heightAnim 2s 3s;
+              // animation-fill-mode: forwards;
               @include mobile{
                 left: $line-width-mobile + 100;
               }
@@ -141,6 +145,7 @@ $background: '../images/bg_intro.jpg';
           color: $gray-light;
           color: $white;
           opacity: 1;
+
         }
     }
 
@@ -284,5 +289,36 @@ $background: '../images/bg_intro.jpg';
   }
   100%{
     opacity: 1;
+  }
+}
+
+@keyframes widthAnim{
+  0%{
+    width: 0;
+    background: darken(#908AE8, 10%);
+  }
+  100%{
+    width: $line-width;
+    background: $primary;
+  }
+}
+
+@keyframes heightAnim{
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+@include mobile{
+  @keyframes widthAnim{
+    0%{
+      width: 0;
+    }
+    100%{
+      width: $line-width-mobile;
+    }
   }
 }
