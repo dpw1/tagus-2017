@@ -50,4 +50,23 @@
       color: $white;
     }
   }
+
+  &--disclaimer{
+    border: 1px solid black;
+    article{
+      border: 1px solid $color-line;
+      p{
+        @include fontM($primary);
+        margin-bottom: 20px;
+      }
+      span{
+        @include fontSM;
+      }
+      a{
+          pointer-events: none;
+          text-indent: -9999px;
+      }
+    }
+
+  }
 }

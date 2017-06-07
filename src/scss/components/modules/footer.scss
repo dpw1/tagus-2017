@@ -5,12 +5,8 @@
   border-top: 1px solid $color-line;
   line-height: 50px;
   z-index: 2;
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
   >p{
-    @include fontXS;
-    color: $white;
+    @include fontXXS($white);
     text-align: center;
   }
 }

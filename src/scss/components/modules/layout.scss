@@ -1,0 +1,41 @@
+.layout{
+  $this:layout;
+  position: relative;
+  width: 100%;
+  display: block;
+  padding-top: 55%;
+  padding-bottom: 5%;
+  background: $color-background;
+  // background: blue;
+  .wrapper{
+    position: relative;
+  }
+
+  &__titleWrapper{
+    position: absolute;
+    left: 0;
+    transform-origin: 0 50%;
+    transform: rotate(-90deg) translate(25%, 50%);
+    margin-left: 10%;
+    @include max(768px){
+      margin-left: 65px;
+    }
+  }
+
+  &__title{
+    @include fontXXL($color-line);
+    font-weight: bold;
+    display: inline;
+  }
+
+  &__image{
+    width: 90%;
+    display: block;
+    position: relative;
+    z-index: 2;
+    img{
+      width: 100%;
+      max-width: 900px;
+    }
+  }
+}

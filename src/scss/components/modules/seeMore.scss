@@ -1,0 +1,50 @@
+.seeMore{
+  position: relative;
+  z-index: 0;
+  display: block;
+  min-height: 180px;
+  font-size: 0;
+  background-color: $color-background;
+
+  &__next, &__prev{
+    @include fontL;
+    position: relative;
+    width: 50%;
+    display: inline-block;
+    min-height: 180px;
+    text-align: center;
+    article{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    i{
+      font-size: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    @include max(768px){
+      width: 100%;
+      padding: 70px 10px;
+      min-height: auto;
+    }
+  }
+
+  &__prev{
+    background: blue;
+    i{
+      top: -3px;
+      margin-right: 10px;
+    }
+  }
+  &__next{
+    background: green;
+    i{
+      top: 0px;
+      margin-left: 10px;
+    }
+  }
+}

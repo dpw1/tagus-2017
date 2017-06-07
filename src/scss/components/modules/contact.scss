@@ -26,11 +26,13 @@
           margin-right: 20px;
           @include max(640px){
             margin: 0 auto;
+                      margin-bottom: 12px;
           }
         }
         @include max(640px){
           display: table;
           margin: 0 auto;
+
         }
       }
     }
