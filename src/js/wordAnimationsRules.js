@@ -36,17 +36,6 @@
       case "lr":
         b = "scale3d(0,1,1)", c = "0 50%", d = "100% 50%";
         break;
-      case "rl":
-        b = "scale3d(0,1,1)", c = "100% 50%", d = "0 50%";
-        break;
-      case "tb":
-        b = "scale3d(1,0,1)", c = "50% 0", d = "50% 100%";
-        break;
-      case "bt":
-        b = "scale3d(1,0,1)", c = "50% 100%", d = "50% 0";
-        break;
-      default:
-        b = "scale3d(0,1,1)", c = "0 50%", d = "100% 50%"
     }
     return {
       val: b,
@@ -59,6 +48,7 @@
     if (this.isAnimating) return !1;
     this.isAnimating = !0;
     var b = {
+      /* Velocidade do traço vermelho*/
         duration: 500,
         easing: "easeInOutQuint",
         delay: 0,
@@ -77,7 +67,7 @@
         }
       },
       g = {
-        delay: a.delay || b.delay,
+        delay: 0,
         complete: function() {
           e.revealer.style.WebkitTransformOrigin = e.revealer.style.transformOrigin = d.origin.halfway, "function" == typeof a.onCover && a.onCover(e.content, e.revealer), anime(f)
         }

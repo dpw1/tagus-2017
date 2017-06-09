@@ -1,7 +1,6 @@
 .project-name{
   position: relative;
   font-size: 0;
-  // min-height: 140px;
   border: 1px solid $gray-light;
   background-color: $color-background;
   opacity: 1;
@@ -16,8 +15,12 @@
     display: block;
     width: 100%;
     z-index: 2;
+
+    .action{
+          transition: all 2s;
+    }
     &:hover{
-      transition: all 2s;
+
       .action{
         color: blue;
       }

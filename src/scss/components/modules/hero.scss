@@ -134,6 +134,7 @@ $background: '../images/bg_intro.jpg';
 
 
         .hero-discover{
+          @include fontSM;
           position: absolute;
           margin-bottom: 1.5%;
           width: 100%;
@@ -190,6 +191,7 @@ $background: '../images/bg_intro.jpg';
     }
 
     &-title{
+      margin-bottom: 20px;
       *{
         @include fontXXL;
       }
@@ -206,8 +208,8 @@ $background: '../images/bg_intro.jpg';
     max-width: 90%;
     // width: 35%;
     position: relative;
-    animation: heroWidth 2s .5s ease-in-out;
-    animation-fill-mode: forwards;
+    // animation: heroWidth .75s .5s ease-in-out;
+    // animation-fill-mode: forwards;
     @include max(768px){
       width: $full;
       height: 30%;
@@ -319,27 +321,26 @@ $background: '../images/bg_intro.jpg';
     background: $primary;
   }
 }
-
-@keyframes heroWidth{
-  0%{
-    width: 90%;
-  }
-  100%{
-    width: 35%;
-  }
-}
-
-@include max(768px){
-  @keyframes heroWidth{
-    0%{
-      height: 90%;
-    }
-    100%{
-      height: 35%;
-    }
-  }
-
-}
+// 
+// @keyframes heroWidth{
+//   0%{
+//     width: 92%;
+//   }
+//   100%{
+//     width: 35%;
+//   }
+// }
+//
+// @include max(768px){
+//   @keyframes heroWidth{
+//     0%{
+//       height: 90%;
+//     }
+//     100%{
+//       height: 35%;
+//     }
+//   }
+// }
 @keyframes heightAnim{
   0%{
     height: 0;

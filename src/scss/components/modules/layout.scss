@@ -30,12 +30,14 @@
 
   &__image{
     width: 90%;
+    max-width: 1200px;
     display: block;
     position: relative;
     z-index: 2;
+    transform: translateX(-100%);
     img{
       width: 100%;
-      max-width: 900px;
+
     }
   }
 }
