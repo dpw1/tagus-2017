@@ -51,9 +51,10 @@
 //Infinite floating
 .--float{
   &:hover{
-    a{
-      animation: floating .7s infinite;
+    >i{
+        animation: floating .7s infinite;
     }
+
   }
 
   @keyframes floating{

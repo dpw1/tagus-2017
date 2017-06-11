@@ -1,26 +1,36 @@
 $top-btn-size: 80px;
 
 .top-button{
-  @extend .--float;
+
   display: block;
   position: relative;
   z-index: 2;
-  background-color: $black;
-  width: $top-btn-size;
   line-height: $top-btn-size;
   height: $top-btn-size;
-  border-radius: 50%;
   margin: 0 auto;
   color: white;
   text-align: center;
-  border: 1px solid $gray-dark;
   overflow: hidden;
+  width: 100%;
   >a{
-    position: relative;
+    @extend .--float;
     @include fontM;
+
+    position: relative;
     color: $primary;
     left: 1px;
     display: block;
     border-radius: inherit;
+    max-width: $top-btn-size;
+    border: 1px solid $gray-dark;
+      border-radius: 50%;
+        background-color: $black;
+        margin: 0 auto;
+  }
+
+  .top-button__icon{
+
+      position: relative;
+      display: inline-block;
   }
 }

@@ -6,7 +6,9 @@
   padding-top: 55%;
   padding-bottom: 5%;
   background: $color-background;
+  overflow: hidden;
   // background: blue;
+
   .wrapper{
     position: relative;
   }
@@ -34,10 +36,23 @@
     display: block;
     position: relative;
     z-index: 2;
-    transform: translateX(-100%);
+    margin-bottom: 60px;
+
+
     img{
       width: 100%;
+    }
+
+    &--left{
+        transform: translateX(-100%);
+    }
+
+    &--right{
+      display: block;
+      float: right;
 
     }
   }
+
+
 }
