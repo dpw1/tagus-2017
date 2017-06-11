@@ -5,8 +5,8 @@
   "base/base",
   "base/fonts";
 
-@import "components/modules/*";
-@import "components/atoms/*";
 @import "components/utils/*";
+@import "components/atoms/*";
+@import "components/modules/*";
 
 @import "pages/**/*";

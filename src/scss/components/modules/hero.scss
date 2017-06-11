@@ -7,7 +7,7 @@ $background: '../images/bg_intro.jpg';
 
 // Backgrounds
 #fox{
-  	// background: url('http://wallpapercave.com/wp/8zKSoW4.jpg') no-repeat center center fixed;
+  	background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('http://wallpapercave.com/wp/8zKSoW4.jpg') no-repeat center center fixed;
     // background-size: cover;
 }
 
@@ -92,12 +92,9 @@ $background: '../images/bg_intro.jpg';
             margin-top: 10px;
             z-index: 1;
 
-
             &:after, &:before{
-
               animation: fadeIn 2s 2.5s;
               animation-fill-mode: forwards;
-              // display: none !important;
             }
             &:after{
               content: '';
@@ -110,7 +107,7 @@ $background: '../images/bg_intro.jpg';
               top: 50%;
               transform: translateY(-50%);
               width: 0;
-              animation: widthAnim 2.5s 2s;
+              animation: widthAnim 1.8s 2s;
               animation-fill-mode: forwards;
             }
             &:before{
@@ -206,7 +203,7 @@ $background: '../images/bg_intro.jpg';
   .hero-center{
     background: rgba(0,0,0,.3);
     max-width: 90%;
-    // width: 35%;
+    width: 35%;
     position: relative;
     // animation: heroWidth .75s .5s ease-in-out;
     // animation-fill-mode: forwards;
@@ -252,7 +249,7 @@ $background: '../images/bg_intro.jpg';
         top: 30%;
         left: -4px;
         opacity: 0;
-        animation: fadeIn 2s 2s;
+        animation: fadeIn .7s 2s;
         animation-fill-mode: forwards;
       }
     }
@@ -314,33 +311,11 @@ $background: '../images/bg_intro.jpg';
 @keyframes widthAnim{
   0%{
     width: 0;
-    background: darken(#908AE8, 10%);
   }
   100%{
     width: $line-width;
-    background: $primary;
   }
 }
-// 
-// @keyframes heroWidth{
-//   0%{
-//     width: 92%;
-//   }
-//   100%{
-//     width: 35%;
-//   }
-// }
-//
-// @include max(768px){
-//   @keyframes heroWidth{
-//     0%{
-//       height: 90%;
-//     }
-//     100%{
-//       height: 35%;
-//     }
-//   }
-// }
 @keyframes heightAnim{
   0%{
     height: 0;

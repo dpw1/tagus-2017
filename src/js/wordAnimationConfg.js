@@ -1,22 +1,25 @@
 
 ! function() {
   var word = document.querySelectorAll(".block-revealer__child");
-  var wordWatcher = [];
-  var delay = 380;
+  var wordWatcher = []; //counts total words on the page
+  var delay = 290;
+  var i = 0; //counts words on sight
 
   console.time('animation')
   for(let i = 0; i < word.length; i++) {
+    console.log(i);
     wordWatcher.push(scrollMonitor.create(word[i]))
   }
   wordWatcher.forEach(function(watcher, index) {
 
+
       watcher.enterViewport(function() {
-          console.log('hih')
+
       function animateWord(x, callback) {
         new RevealFx(word[index], {
           revealSettings: {
             bgcolor: "#e1253b",
-            offset: '-=1500',
+            // offset: '-=2500',
             delay: 0,
             duration: 0,
             onCover: function(anim) {
@@ -38,11 +41,14 @@
       function removeSpan(){
         var string = (word[index].innerText || word[index].textContent)
         $(word[index]).parent().text(string);
-        // $(word[index]).parents('span').last().text(string);
       }
 
-      setTimeout(animateWord, index * delay );
+      setTimeout(animateWord, i * delay );
+
+      i+=1;
+
   });
 });
   console.timeEnd('animation')
+  i = 0;
 }();

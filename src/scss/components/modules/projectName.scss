@@ -1,11 +1,10 @@
 .project-name{
   position: relative;
   font-size: 0;
-  border: 1px solid $gray-light;
+  border: 1px solid #2A2A2A;
   background-color: $color-background;
-  opacity: 1;
-  transform: translateY(80px);
-  transition: all 1.5s cubic-bezier(0,1.12,.73,1.01) .5s;
+  opacity: 0;
+  transform: translateY(160px);
 
   &:not(:first-child){
     border-top: none;
@@ -15,14 +14,24 @@
     display: block;
     width: 100%;
     z-index: 2;
+    transition: all 2s;
 
     .action{
-          transition: all 2s;
+          // transition: all 2s;
     }
     &:hover{
 
       .action{
-        color: blue;
+        // Animate right arrow -->
+        i{
+          position: relative;
+          display: inline-block;
+          will-change: transform;
+          animation: rightLoop .5s 0s infinite;
+          animation-fill-mode: forwards;
+
+        }
+
       }
     }
   }
@@ -78,10 +87,43 @@
     }
   }
 
-
-  // Backgrounds
+  /*  Backgrounds */
+  //FOX LIFE
   &:nth-child(1):hover{
-    background: url('http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-21.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/foxlife-mock-tablet.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+  //ARVAL
+  &:nth-child(2):hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/arval-mock-laptop.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+  //MEAL-MASTERS
+  &:nth-child(3):hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/mealmasters-mock-tablet.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+  //MEGALANCERS
+  &:nth-child(4):hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/megalancers-mock-mobile.jpg');
+    background-size:cover;
+    background-position:center;
   }
 
+
+  // Animations
+  @keyframes rightLoop{
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(5px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
 }

@@ -20,21 +20,28 @@
       @include fontM;
     }
 
-    &:last-of-type{
-      a{
-        &:not(:last-child){
-          margin-right: 20px;
-          @include max(640px){
-            margin: 0 auto;
-                      margin-bottom: 12px;
-          }
-        }
-        @include max(640px){
-          display: table;
-          margin: 0 auto;
-
-        }
-      }
-    }
+    // &:last-of-type{
+    //   a{
+    //     &:not(:last-child){
+    //       @include max(640px){
+    //         margin: 0 auto;
+    //                   margin-bottom: 12px;
+    //       }
+    //     }
+    //     @include max(640px){
+    //       display: table;
+    //       margin: 0 auto;
+    //
+    //     }
+    //   }
+    // }
+  }
+  &__mail{
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+  &__phone{
+    display: inline-block;
+    margin-bottom: 7px;
   }
 }
