@@ -28,6 +28,11 @@ $laptop: 1366px;
         @content;
     }
 }
+@mixin min ($width) {
+    @media (min-width: #{$width}) {
+        @content;
+    }
+}
 
 //fonts
 @mixin fontXXL($color: $primary) {
@@ -38,6 +43,9 @@ $laptop: 1366px;
     line-height: 85%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @include min(1400px){
+      font-size: 170px;
+    }
 }
 @mixin fontXL($color: $primary) {
     font-family: $primary-font;

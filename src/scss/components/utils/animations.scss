@@ -52,6 +52,7 @@
 .--float{
   &:hover{
     >i{
+        will-change: transform;
         animation: floating .7s infinite;
     }
 
@@ -68,5 +69,6 @@
         transform: translateY(0px);
       }
     }
-
 }
+
+//Shiny text

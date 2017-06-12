@@ -7,11 +7,19 @@ $background: '../images/bg_intro.jpg';
 
 // Backgrounds
 #fox{
-  	background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('http://wallpapercave.com/wp/8zKSoW4.jpg') no-repeat center center fixed;
+  	background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('../images/foxlife-mock-desktop.jpg') no-repeat center center fixed;
 }
 
 #arval{
   background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/arval-background.jpg') no-repeat center center fixed;
+}
+
+#meal-masters{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/mealmasters-background.jpg') no-repeat center center fixed;
+}
+
+#megalancers{
+      background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/megalancers-mock-laptop.jpg') no-repeat center center fixed;
 }
 
 .hero {
@@ -160,12 +168,6 @@ $background: '../images/bg_intro.jpg';
           bottom: -138px;
             display: inline-block;
         }
-        .hero-social {
-
-            > * {
-
-            }
-        }
     }
 
     &-bottom {
@@ -208,8 +210,7 @@ $background: '../images/bg_intro.jpg';
     max-width: 90%;
     width: 35%;
     position: relative;
-    // animation: heroWidth .75s .5s ease-in-out;
-    // animation-fill-mode: forwards;
+
     @include max(768px){
       width: $full;
       height: 30%;
@@ -259,8 +260,12 @@ $background: '../images/bg_intro.jpg';
 
     article{
       position: absolute;
-      right: 80px;
-      bottom: 50px + 80px;
+      right: 15%;
+      bottom: 15%;
+      @include max(940px){
+        right: -5%;
+        bottom: 15%;
+      }
       @include max(768px){
         width: 100%;
         right: auto;
@@ -296,12 +301,14 @@ $background: '../images/bg_intro.jpg';
     transform: translateX(-50%);
     bottom: 100px;
     z-index: 2;
+    max-width: 200px;
+    img{
+      width: 100%;
+    }
   }
 
   .hero__subtitle {
-    &:after, &:before{
       display: none !important;
-    }
   }
 
 }
