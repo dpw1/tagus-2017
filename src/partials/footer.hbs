@@ -5,21 +5,27 @@
     </footer>
 
     </main>
+
+    <!-- LOCAL JS -->
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/anime.js"></script>
+    <script src="js/libs/smooth-scroll.min.js"></script>
     <script src="js/libs/helpers.js"></script>
+
+    <!-- CDN JS  -->
+    <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/stutrek/scrollMonitor/19b8820d/scrollMonitor.js"></script>
+
     <script>
       $( window ).on( "load", function(){
         var loader = $('.loader');
         loader.addClass('loader--hidden');
         $.getScript("js/bundle.js");
         loader.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-                  $(this).remove();
+          $(this).remove();
+          smoothScroll.init();
         });
-
       });
     </script>
-    <!-- <script src="js/bundle.js"></script> -->
   </body>
 </html>
