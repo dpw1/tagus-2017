@@ -29,10 +29,10 @@
       @include fontXL;
       color: $white;
       &:before{
-        content: '“';
+        // content: '“';
       }
       &:after{
-        content: '”';
+        // content: '”';
       }
     }
     >a{

@@ -11,8 +11,6 @@
     wordWatcher.push(scrollMonitor.create(word[i]))
   }
   wordWatcher.forEach(function(watcher, index) {
-
-
       watcher.enterViewport(function() {
 
       function animateWord(x, callback) {
@@ -46,7 +44,6 @@
       setTimeout(animateWord, i * delay );
 
       i+=1;
-
   });
 });
   console.timeEnd('animation')
