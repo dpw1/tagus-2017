@@ -3,10 +3,19 @@
   height: 50px;
   background: $color-background;
   border-top: 1px solid $color-line;
-  line-height: 50px;
+  line-height: 45px;
   z-index: 2;
+
+
   >p{
     @include fontXXS($white);
     text-align: center;
+  }
+  &__char{
+    padding: 0 10px;
+    color: firebrick;
+    font-size: 24px;
+    position: relative;
+    top: 2px;
   }
 }

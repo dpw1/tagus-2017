@@ -15,11 +15,11 @@
     }
 
     .menu-btn {
-        left: 0;
+        // left: 0;
     }
 
     .logo {
-        right: 0;
+        left: 0;
     }
 
     &__icon {
@@ -61,4 +61,21 @@
             stroke-dasharray: 1px 220px;
         }
     }
+}
+
+.fish-svg{
+  .fish-svg-wrapper{
+    position: relative;
+    max-width: .55em;
+    fill: $white;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    transform: rotate(-30deg);
+    padding-top: 5px;
+    transition: fill .45s;
+  }
+  &:hover .fish-svg-wrapper{
+    fill: $primary;
+  }
 }

@@ -1,16 +1,1 @@
-.fish-svg{
-  .fish-svg-wrapper{
-    position: relative;
-    max-width: .55em;
-    fill: $white;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    transform: rotate(30deg);
-    padding-top: 5px;
-    transition: fill .45s;
-  }
-  &:hover .fish-svg-wrapper{
-    fill: $primary;
-  }
-}
+

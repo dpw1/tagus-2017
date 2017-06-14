@@ -5,9 +5,8 @@
   var delay = 290;
   var i = 0; //counts words on sight
 
-  console.time('animation')
+
   for(let i = 0; i < word.length; i++) {
-    console.log(i);
     wordWatcher.push(scrollMonitor.create(word[i]))
   }
   wordWatcher.forEach(function(watcher, index) {
@@ -46,6 +45,5 @@
       i+=1;
   });
 });
-  console.timeEnd('animation')
   i = 0;
 }();
